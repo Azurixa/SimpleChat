@@ -1,0 +1,25 @@
+{
+  "name": "SimpleChat",
+  "version": "1.0.0",
+  "description": "Simple NodeJS Express app to run live chat server!",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "semver": "^5.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "chat": "node ./src/index.js"
+  },
+  "keywords": [
+    "Chat",
+    "SimpleChat",
+    "Chatting room",
+    "NodeJS",
+    "Express"
+  ],
+  "author": "Mateusz Ożóg",
+  "license": "MIT"
+}

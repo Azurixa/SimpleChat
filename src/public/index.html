@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>SimpleChat by Matthew!</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="author" content="Mateusz Ożóg">
+    <meta name="description" content="Simple NodeJS Express app to run live chat server!">
+    <meta name="keywords" content="Server, Chat, Live Chat, NodeJS, JS, XMLHttpRequest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- JQuery -->
+    <script type="text/javascript" src="resources/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <script type="text/javascript" src="resources/js/bootstrap.bundle.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="resources/css/app.css">
+</head>
+<body>
+    <div id="simple-chat-main">
+        <div class="simple-chat">
+            <div class="nickname-box">
+                <p id="nickname-p"></p>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nickname" placeholder="Nickname...">
+                </div>
+                <button onClick="setNickname()" class="btn btn-primary" id="setNickname">Set Nickname</button>
+            </div>
+            <div class="logged-only">
+                <div class="send-box">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="message" placeholder="Aa...">
+                    </div>
+                    <button onClick="sendChat()" class="btn btn-primary" id="sendChat">Send</button>
+                </div>
+                <div id="chat-box">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<!-- SimpleChat script -->
+<script type="text/javascript" src="resources/js/app.js"></script>
+</html>
