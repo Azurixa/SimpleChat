@@ -1,0 +1,85 @@
+#simple-chat-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#simple-chat-main * {
+  transition: .3s all;
+}
+
+#simple-chat-main .form-group {
+  margin-bottom: 0;
+}
+
+#simple-chat-main .simple-chat {
+  width: 50%;
+}
+
+#simple-chat-main .simple-chat .nickname-box {
+  display: flex;
+}
+
+#simple-chat-main .simple-chat .nickname-box .form-group {
+  width: -webkit-fill-available;
+}
+
+#simple-chat-main .simple-chat .nickname-box .form-group .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#simple-chat-main .simple-chat .nickname-box .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#simple-chat-main .simple-chat .nickname-box #nickname-p {
+  display: none;
+}
+
+#simple-chat-main .simple-chat .nickname-box #nickname-p .nick {
+  font-size: 1.5rem;
+}
+
+#simple-chat-main .simple-chat .send-box {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#simple-chat-main .simple-chat .send-box .form-group {
+  width: -webkit-fill-available;
+}
+
+#simple-chat-main .simple-chat .send-box .form-group .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#simple-chat-main .simple-chat .send-box .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#simple-chat-main .simple-chat #chat-box {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+#simple-chat-main .simple-chat #chat-box p {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#simple-chat-main .simple-chat #chat-box p .nickname {
+  font-size: 1.2rem;
+}
+
+#simple-chat-main .simple-chat #chat-box p .message {
+  font-size: .9rem;
+}
+
+#simple-chat-main .simple-chat .logged-only {
+  display: none;
+}

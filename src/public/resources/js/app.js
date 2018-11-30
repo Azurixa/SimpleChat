@@ -56,15 +56,19 @@ function drawChat(){
 
     if(temp_chat != window.chat){
         window.chat = temp_chat;
-        $('#chat').html(window.chat);
-        console.log('refreshed');
+        $('#chat-box').html(window.chat);
+        console.log('Chat refreshed!');
     }
 }
 
 function setNickname(){
 
     var val = $('#nickname').val();
-    $('#setNickname').fadeOut();
+    $('#setNickname').addClass('d-none');
+    $('#nickname').addClass('d-none');
+    $('#nickname-p').html('chatting as <span class="nick">'+val+'</span>');
+    $('#nickname-p').fadeIn();
+    $('.logged-only').fadeIn();
     window.nickname = val;
 }
 

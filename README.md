@@ -1,3 +1,5 @@
+!['preview of SimpleChat'](https://github.com/Azurixa/SimpleChat/blob/API/preview.png)
+
 # SimpleChat v0.2 ヽ( ・∀・)ノ
 > by Mateusz Ożóg
 
