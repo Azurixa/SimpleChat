@@ -19,7 +19,9 @@ $ npm install
 
 One simple command!
 
-`$ npm run chat`
+```
+$ npm run chat
+```
 
 Chat server will start on port :3000 on your local machine\n
 Clients can join just going to your IP/WWW adress :3000!
