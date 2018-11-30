@@ -1,5 +1,6 @@
-var chat = [];
-var nickname = "Anonymus";
+var chatArray = new Array();
+var nickname = '';
+var chat = '';
 
 function getChat(){
 
@@ -7,38 +8,65 @@ function getChat(){
     req.open('GET', '/getchat');
     req.setRequestHeader('Content-Type', 'application/json');
     req.addEventListener('load', function() {
-        window.chat = req.responseText;
+        if(req.responseText != null){
+            window.chatArray = req;
+            drawChat();
+        }
     });
     req.send();
-
-    drawChat();
-
 }
 
 function sendChat(){
 
-    var val = $('#input').val();
-    console.log(val);
+    if(window.nickname != ''){
 
-    var req = new XMLHttpRequest();
+        //Get message input value
+        var val = $('#message').val();
 
-    req.open('POST', '/send');
-    req.setRequestHeader('Content-Type', 'application/json');
-    req.send(JSON.stringify({ nickname: nickname, message: val }));
+        //Create a new xml request
+        var req = new XMLHttpRequest();
 
-    req.addEventListener('load', () => {
-        console.log('Send!');
-    });
+        //Posting to /send witch JSON array of nickname and message
+        req.open('POST', '/send');
+        req.setRequestHeader('Content-Type', 'application/json');
+        req.send(JSON.stringify({ "nickname": nickname, "message": val }));
 
-    req.addEventListener('error', () => {
-        console.log('Oh no! Error!');
-        console.log(e);
-    });
+        //success -> write in console 'send!'
+        req.addEventListener('load', () => {
+            console.log('Send!');
+        });
+
+        //error -> write in console 'Error!'
+        req.addEventListener('error', () => {
+            console.log('Oh no! Error!');
+            console.log(e);
+        });
+    }
 }
 
 function drawChat(){
-    $('#chat').html(window.chat);
+
+    var temp_chat = '';
+    var messages = JSON.parse(window.chatArray.response);
+
+    for(var i = messages.length - 1; i >= 0; i--){
+        var message = messages[i];
+        temp_chat += '<p><span class="nickname">'+message.nickname+'</span> - <span class="message">'+message.message+'</span></p>';
+    }
+
+    if(temp_chat != window.chat){
+        window.chat = temp_chat;
+        $('#chat').html(window.chat);
+        console.log('refreshed');
+    }
+}
+
+function setNickname(){
+
+    var val = $('#nickname').val();
+    $('#setNickname').fadeOut();
+    window.nickname = val;
 }
 
 getChat();
-setInterval('getChat()', 100);
+setInterval('getChat()', 1000);

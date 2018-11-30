@@ -1,4 +1,4 @@
-# SimpleChat v0.1 ヽ( ・∀・)ノ
+# SimpleChat v0.2 ヽ( ・∀・)ノ
 > by Mateusz Ożóg
 
 Simple NodeJS Express based chat!

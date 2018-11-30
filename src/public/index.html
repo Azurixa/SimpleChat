@@ -6,12 +6,15 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body>
-        <div class="chat">
-            <p id="chat"></p>
+        <div class="send">
+            <input type="text" id="nickname" placeholder="Nickname...">
+            <button onClick="setNickname()" id="setNickname">Set Nickname</button>
         </div>
         <div class="send">
-            <input type="text" name="message" id="input">
-            <button onClick="sendChat()">Send</button>
+            <input type="text" id="message" placeholder="Aa...">
+            <button onClick="sendChat()" id="sendChat">Send</button>
+        </div>
+        <div id="chat">
         </div>
     </body>
     <script type="text/javascript" src="resources/js/app.js"></script>
