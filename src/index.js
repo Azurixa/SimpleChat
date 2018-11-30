@@ -9,7 +9,7 @@ api.use(express.static(__dirname + '/public'));
 api.use(bodyParser.json());
 
 api.listen(3000, () => {
-    console.log('Api up and running on port 3000');
+    console.log('SimpleChat up and running!\nListening port: 3000');
 });
 
 api.get('/getchat', (req, res) => {
