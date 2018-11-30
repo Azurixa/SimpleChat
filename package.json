@@ -1,6 +1,6 @@
 {
   "name": "Chat",
-  "version": "1.0.0",
+  "version": "0.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "chat": "node ./src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["Chat", "SimpleChat", "Chatting room", "NodeJS", "Express"],
+  "author": "Mateusz Ożóg",
+  "license": "MIT"
 }
