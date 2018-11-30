@@ -1,4 +1,5 @@
 var chat = [];
+var nickname = "Anonymus";
 
 function getChat(){
 
@@ -10,7 +11,7 @@ function getChat(){
     });
     req.send();
 
-    $('#chat').html(window.chat);
+    drawChat();
 
 }
 
@@ -23,7 +24,7 @@ function sendChat(){
 
     req.open('POST', '/send');
     req.setRequestHeader('Content-Type', 'application/json');
-    req.send(JSON.stringify({ item: val }));
+    req.send(JSON.stringify({ nickname: nickname, message: val }));
 
     req.addEventListener('load', () => {
         console.log('Send!');
@@ -35,5 +36,9 @@ function sendChat(){
     });
 }
 
+function drawChat(){
+    $('#chat').html(window.chat);
+}
+
 getChat();
-setInterval('getChat()', 500);
+setInterval('getChat()', 100);
